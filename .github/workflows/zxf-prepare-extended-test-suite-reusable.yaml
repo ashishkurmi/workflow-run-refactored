@@ -1,0 +1,12 @@
+name: ZXF: Prepare Extended Test Suite Reusable
+
+on:
+  workflow_call:
+
+jobs:
+  prepare-extended-test-suite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare Extended Test Suite
+        run: echo "Preparing extended test suite"
+

@@ -1,0 +1,12 @@
+name: Node ZXC Build Release Artifact
+
+on:
+  workflow_call:
+
+jobs:
+  build-release-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Release Artifact
+        run: echo "Building release artifact"
+

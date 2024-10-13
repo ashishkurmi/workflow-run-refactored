@@ -1,0 +1,23 @@
+name: ZXF: Deploy Production Release Reusable
+
+on:
+  workflow_call:
+
+jobs:
+  prepare-tag-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare Tag Release
+        run: echo "Preparing tag release"
+
+  release-tag:
+    needs: [prepare-tag-release]
+    uses: ./.github/workflows/node-zxc-build-release-artifact.yaml
+
+  release-branch:
+    uses: ./.github/workflows/node-zxc-build-release-artifact.yaml
+
+  prepare-extended-test-suite:
+    needs: [prepare-tag-release, release-tag, release-branch]
+    uses: ./.github/workflows/zxf-prepare-extended-test-suite-reusable.yaml
+

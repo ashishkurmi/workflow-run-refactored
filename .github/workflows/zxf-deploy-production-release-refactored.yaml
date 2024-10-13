@@ -1,0 +1,11 @@
+name: ZXF: Deploy Production Release Refactored
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+-?*'
+
+jobs:
+  deploy-production-release:
+    uses: ./.github/workflows/zxf-deploy-production-release-reusable.yaml
+
