@@ -1,4 +1,4 @@
-name: Node: Build Application Refactored
+name: "Node: Build Application Refactored"
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches:
       - develop
       - main
-      - 'release/*'
+      - "release/*"
 
 jobs:
   dummy-job-1:
@@ -19,4 +19,3 @@ jobs:
     needs: [dummy-job-1]
     if: ${{ needs.dummy-job-1.result == 'success' || needs.dummy-job-1.result == 'skipped' }}
     uses: ./.github/workflows/zxf-deploy-production-release-reusable.yaml
-

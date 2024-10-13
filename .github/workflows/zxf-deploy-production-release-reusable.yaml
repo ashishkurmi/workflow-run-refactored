@@ -1,4 +1,4 @@
-name: ZXF: Deploy Production Release Reusable
+name: "ZXF: Deploy Production Release Reusable"
 
 on:
   workflow_call:
@@ -20,4 +20,3 @@ jobs:
   prepare-extended-test-suite:
     needs: [prepare-tag-release, release-tag, release-branch]
     uses: ./.github/workflows/zxf-prepare-extended-test-suite-reusable.yaml
-

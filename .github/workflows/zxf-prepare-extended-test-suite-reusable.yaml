@@ -1,4 +1,4 @@
-name: ZXF: Prepare Extended Test Suite Reusable
+name: "ZXF: Prepare Extended Test Suite Reusable"
 
 on:
   workflow_call:
@@ -9,4 +9,3 @@ jobs:
     steps:
       - name: Prepare Extended Test Suite
         run: echo "Preparing extended test suite"
-
